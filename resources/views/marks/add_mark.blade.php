@@ -1,5 +1,4 @@
 
-
 <style>
    
     .container {
@@ -42,7 +41,7 @@
 
 @section('content')
 
-<div class="container col-md-12 col-md-6">
+<div class="container col-md-12 col-md-4 col-md-offset-4">
 
   <form  method="POST" 
         action="{{ $studentsMark->id == null ? '/students/marks/save' : '/students/marks/update/' . $studentsMark->id}}"
@@ -94,7 +93,6 @@
     
 
   </form>
-
 </div>
 
 

@@ -14,6 +14,11 @@ class Student extends Model
     protected $fillable = ['name', 'age', 'gender', 'reporting_teacher_id'];
 
 
+    /**
+     * To get students details
+     *
+     * @return array
+     */
     public function getStudents()
     {
         return Student::select('students.id','students.name','students.age','students.gender','teachers.name as reporting_teacher_id')
@@ -22,6 +27,12 @@ class Student extends Model
                     ->get();
     }
 
+    /**
+     * To create new student record
+     *
+     * @param array $input
+     * @return void
+     */
     public function saveStudentsData($input)
     {
         $student = new Student();
@@ -33,6 +44,13 @@ class Student extends Model
         $student->save(); 
     }
 
+    /**
+     * To update existing student record
+     *
+     * @param int $student_id
+     * @param array $input
+     * @return void
+     */
     public function updateStudentsData($student_id, $input)
     {
         $student = Student::Find($student_id);

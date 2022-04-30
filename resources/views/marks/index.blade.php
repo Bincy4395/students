@@ -7,8 +7,8 @@
     }
 
     #studentsMarks td, #studentsMarks th {
-    border: 1px solid #ddd;
-    padding: 8px;
+        border: 1px solid #ddd;
+        padding: 8px;
     }
 
     #studentsMarks tr:nth-child(even){background-color: #f2f2f2;}
@@ -24,7 +24,7 @@
     }
 
     .button {
-        background-color: #4CAF50; /* Green */
+        background-color: #4CAF50; 
         border: none;
         color: white;
         padding: 15px 32px;
@@ -82,6 +82,5 @@
     @endif
 
 </div>
-
 
 @endsection

@@ -10,6 +10,11 @@ class StudentsMark extends Model
 {
     use HasFactory;
 
+    /**
+     * To get students marks details
+     *
+     * @return array
+     */
     public function getStudentsMarks()
     {
         return StudentsMark::select('students_marks.*','students.name as student_name')
@@ -17,6 +22,12 @@ class StudentsMark extends Model
                     ->get();
     }
 
+    /**
+     * To create new record
+     *
+     * @param array $input
+     * @return void
+     */
     public function saveStudentsMarks($input)
     {
         $studentsMarks = new StudentsMark();
@@ -29,6 +40,13 @@ class StudentsMark extends Model
         $studentsMarks->save(); 
     }
 
+    /**
+     * To update existing record
+     *
+     * @param int $id
+     * @param array $input
+     * @return void
+     */
     public function updateStudentsMarks($id, $input)
     {
         $studentsMarks = StudentsMark::Find($id);

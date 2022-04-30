@@ -40,7 +40,7 @@
 @extends('layouts/layout')
 @section('content')
 
-<div class="container col-md-12 col-md-4" >
+<div class="container col-md-12 col-md-4 col-md-offset-4" >
 
   <form method="POST" 
         action="{{ $student->id == null ? '/students/save' : '/students/update/' . $student->id}}"
@@ -77,9 +77,7 @@
         <input class="button w3-button w3-green" type="submit" value="Submit">
     </div>
     
-
   </form>
-
 </div>
 
 @endsection
